@@ -1,12 +1,14 @@
-let recupButon = document.getElementById("button");
 let image = document.getElementById("image");
-
+let searchPoke = document.getElementById("searchPoke");
+let submitButton = document.getElementById("submitButton");
 
 const TraitemenPoke = async () =>{
     console.log("La fonction TraitemenPoke a été appelée.");
-    let randomNumber = Math.ceil(Math.random()*251)+1;
+    var pokemon = searchPoke.value;
+
+    console.log(pokemon);
     
-    let request = `https://pokeapi.co/api/v2/pokemon/${randomNumber}`;
+    let request = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
     let data = await fetch(request);
 
@@ -17,6 +19,4 @@ const TraitemenPoke = async () =>{
     image.src = reponse.sprites.front_default;
 }
 
-recupButon.addEventListener("click",TraitemenPoke);
-
-
+submitButton.addEventListener("click",TraitemenPoke);

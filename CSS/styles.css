@@ -1,11 +1,11 @@
 #wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; /* Centre horizontalement */
-    height: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
 }
 
 #image {
-    max-width: 100%;
+    max-width: 80px;
 }
