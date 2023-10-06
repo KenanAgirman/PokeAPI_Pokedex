@@ -1,7 +1,9 @@
 let image = document.getElementById("image");
+let imageShiny = document.getElementById("imageShiny");
 let searchPoke = document.getElementById("searchPoke");
 let submitButton = document.getElementById("submitButton");
 let errorMessage = document.getElementById("errorMessage");
+let types = document.getElementById("types");
 
 const TraitemenPoke = async () =>{
     console.log("La fonction TraitemenPoke a été appelée.");
@@ -20,7 +22,13 @@ const TraitemenPoke = async () =>{
         if(data.ok)
         {
             let reponse = await data.json();
-            image.src = reponse.sprites.front_default; 
+            imageShiny.src = reponse.sprites.front_shiny; 
+            image.src = reponse.sprites.front_default;
+            types.types = reponse.types.name;
+
+            console.log(reponse.types.name);
+
+            errorMessage.textContent = " ";
         } else{
             errorMessage.textContent =("Le pokemon n'existe pas");
         }
