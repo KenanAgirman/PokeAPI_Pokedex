@@ -9,3 +9,6 @@
 #image {
     max-width: 80px;
 }
+#errorMessage{
+    color: red;
+}

@@ -21,7 +21,7 @@ const TraitemenPoke = async () =>{
         {
             let reponse = await data.json();
             image.src = reponse.sprites.front_default; 
-        } else {
+        } else{
             errorMessage.textContent =("Le pokemon n'existe pas");
         }
 
