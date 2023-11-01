@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <script defer src="code.js"></script>
+    <script type="module"  src="code.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
     <div id="wrapper">
         <div id="image-wrapper">
             <img id="image" src=" " alt="" />
@@ -19,13 +18,17 @@
         </div>
 
         <div id="types">
-            <label for="types"></label>
+            <label for="types"> </label>
         </div>
 
-        <div id="recherche"><br>
-            <input type="text" id="searchPoke"><br>
-            <input type="button" value="Entrez un pokemon" id="submitButton"><br>
-        </div><br>
+        <div id="recherche">
+            <input type="text" id="searchPoke" placeholder="Entrez un Pokémon">
+            <li>
+
+            </li>
+            <input type="submit" value="Rechercher" id="submitButton">
+        </div>
+        
         <div id="errorMessage"></div>
     </div>
 </body>
